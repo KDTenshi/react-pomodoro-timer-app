@@ -1,0 +1,73 @@
+@use "../../../shared/style/colors" as c;
+
+.Popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($color: c.$black, $alpha: 0.25);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Settings {
+  background: c.$white;
+  padding: 25px 50px;
+  border: 5px solid c.$black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Title {
+  font-size: 25px;
+  color: c.$black;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Label {
+  font-size: 20px;
+  color: c.$black;
+  font-weight: 500;
+}
+
+.Input {
+  width: 15vw;
+  margin: 0 15px;
+  padding: 5px 10px;
+  outline: 0;
+  border: 3px solid c.$black;
+  border-radius: 5px;
+  font-size: 20px;
+  color: c.$black;
+}
+
+.Buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.Button {
+  font-size: 25px;
+  background: c.$white;
+  border: 3px solid c.$black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: c.$black;
+  cursor: pointer;
+
+  &:hover {
+    background: c.$gray;
+  }
+}

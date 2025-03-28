@@ -2,4 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: #f9f5f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=App.css.map */

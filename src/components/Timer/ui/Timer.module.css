@@ -1,0 +1,58 @@
+.Timer {
+  width: 50vw;
+  height: 75vh;
+  background: #f9f5f6;
+  border: 5px solid #41444b;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.Title {
+  color: #41444b;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.Status {
+  color: #41444b;
+  font-size: 25px;
+}
+
+.Time {
+  color: #41444b;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Button {
+  padding: 10px;
+  background: #f9f5f6;
+  border: 5px solid #41444b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Button:hover {
+  background: #b4b4b8;
+}
+.Button span {
+  font-size: 45px;
+  color: #41444b;
+}
+
+.Settings {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}/*# sourceMappingURL=Timer.module.css.map */

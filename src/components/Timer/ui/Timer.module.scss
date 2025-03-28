@@ -1,0 +1,62 @@
+@use "../../../shared/style/colors" as c;
+
+.Timer {
+  width: 50vw;
+  height: 75vh;
+  background: c.$white;
+  border: 5px solid c.$black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.Title {
+  color: c.$black;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.Status {
+  color: c.$black;
+  font-size: 25px;
+}
+
+.Time {
+  color: c.$black;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Button {
+  padding: 10px;
+  background: c.$white;
+  border: 5px solid c.$black;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: c.$gray;
+  }
+
+  & span {
+    font-size: 45px;
+    color: c.$black;
+  }
+}
+
+.Settings {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
