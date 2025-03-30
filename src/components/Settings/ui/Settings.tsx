@@ -1,30 +1,28 @@
 import React, { FC, useState } from "react";
 import style from "./Settings.module.css";
+import { useAppDispatch, useAppSelector } from "../../../app/store/appStore";
+import { hidePopup } from "../../../shared/store/popupSlice";
+import { setRestTime, setWorkTime } from "../../../shared/store/timerSlice";
 
-interface SettingsProps {
-  isShown: boolean;
-  setIsShown: (isShown: boolean) => void;
-  workTime: number;
-  restTime: number;
-  setWorkTime: (time: number) => void;
-  setRestTime: (time: number) => void;
-}
+const Settings: FC = () => {
+  const isShown = useAppSelector((state) => state.popup.isShown);
+  const { workTime, restTime } = useAppSelector((state) => state.timer);
+  const dispatch = useAppDispatch();
 
-const Settings: FC<SettingsProps> = ({ isShown, setIsShown, workTime, setWorkTime, restTime, setRestTime }) => {
   const [workTimeValue, setWorkTimeValue] = useState(workTime);
   const [restTimeValue, setRestTimeValue] = useState(restTime);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    setWorkTime(workTimeValue);
-    setRestTime(restTimeValue);
+    dispatch(setWorkTime({ time: workTimeValue }));
+    dispatch(setRestTime({ time: restTimeValue }));
 
-    setIsShown(false);
+    dispatch(hidePopup());
   };
 
   const handleCancel = () => {
-    setIsShown(false);
+    dispatch(hidePopup());
   };
 
   if (!isShown) return null;
